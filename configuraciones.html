@@ -1,0 +1,192 @@
+<!--**************************************************************
+******************************************************************
+***Autor: Cristian Alberto Ramirez Cruz                        *** 
+***                                                            ***
+***Fecha: 03/12/2018                                           ***
+***Nombre: Tutorial Ubuntu                                     ***
+***Modulo:             							               ***
+***Version: 1.0                                                ***
+***Informacion: cristianalbertoramirezcrus@gmail.com           ***
+******************************************************************
+***************************************************************-->
+<html>
+<head>
+<title></title>
+<style>
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:650px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 50px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:150px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+</style>
+</head>
+<body>
+	<center><h1>Configuraciones</h1></center>
+		<div id="header" >
+			<ul class="nav">
+				<center><li><a href="Tutorial Ubuntu.html">Inicio</a></li></center>
+			</ul>
+		</div>
+	<br>
+	<br>
+	<br>
+	<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Simple con HTML Y CSS</title>
+	<link rel="stylesheet" href="estilos.css">
+    	<style>
+		body {margin-left: 100px; margin-right: 100px; text-align:justify;}
+        
+		div.otro {
+		background-color: cadetblue;
+		color: white;
+            margin: 30px 0 20px 0;
+		padding: 20px;
+		} 
+        
+	
+        
+        .otro 3 {
+        background-color: white;
+        color: cadetblue;
+        }
+	</style>
+	  <h3><a style="color:cadetblue;">Configuracion y Clonacion del Repositorio</a></h3><br/>
+    1. Este sera el lugar donde tiene que quedar guardado el codigo <a style="color:green;">( cd/var/www/html )</a> y de enter para ejecutar cualquier instrucción.<br/><br/>
+    2. Tecleara el siguiente codigo y la URL que aparece acontinuacion <a style="color:green;">(sudo git clone https://github.com/dgeti-cetis108/programacion-M4s2-2018.git)</a> esto sirve para clonar el repositorio y obligatoriamente tiene que estar conectado a internet.<br/><br/>
+    3. Despues la instrucion <a style="color:green;">( ls )</a>, esto sirve para todo el listado de archivos.<br/><br/>
+    4. Cambiara el nombre del archivo que descargo de la URL, tecleando el siguiente codigo <a style="color:green;">( sudo mv Programacion-M4s2-2018/ library.com )</a>.<br/><br/>
+    5. Despues la instrucion <a style="color:green;">( ls )</a>.<br/><br/>
+	<br>
+	<h3><a style="color:cadetblue;">Configuracion de Servicios</a></h3><br/>
+	<b>En esta parte estaremos asegurandonos que los servicio que utilizaremos esten activados (en ejecucion).</b><br/><br/>
+    1.El primer paso teclearas el siguiente codigo <a style="color:green;">( sudo service apache 2 restart )</a> esto sirve para detener e iniciar cualquier servicio.  <br/><br/>  
+    2.Este comando por igual se aplica para detener y iniciar un servicio <a style="color:green;"> ( sudo service mysql restart ).</a>
+          <br/>
+		  <br/>
+		  <h3><a style="color:cadetblue;">Creacion de Usuario en <U>MYSQL</U></a></h3><br/>
+		   1.Para crear un usuario usa el comando <a style="color:green;">( creat user 'cristian' @'localhost' identified by ')</a>cetis luego tememos que dar permisos de administrador con el comando <a style="color:green;">( grant all on library.* to 'cristian'@'localhost')</a><BR/><br/>
+	 <h3><a style="color:cadetblue;">Configuracion Usuario y contraseña <U>MYSQL</U></a></h3><br/>
+	 1. Escribir el comando (<a style="color:green;"> create user 'cristian'@'localhost' identified by '123' </a>); y dar entre para crear el usuario y contraseña.<br/><br/>
+    2. Escribe el comando (<a style="color:green;"> grant all on library to 'cristian'@'localhost' </a>) y dar enter para que se otorgue al usuario los permiso de root<br/><br/>
+    3.escribir (<a style="color:green;"> exit</a>) y dar enter para salir de mysql<br/><br/>
+    4.escribir (<a style="color:green;"> exit</a>) y dar enter para salir de root<br/><br/>
+    5.escribir el comando (<a style="color:green;"> mysql -u cristian -p</a>) escribir la contraceña y dar enter para comprobar la conexion<br/><br/>
+    6.escribir (<a style="color:green;"> exit</a>) y dar enter para salir de mysql<br/><br/>
+    7.escribir el comando (<a style="color:green;"> sudo nano /var/www/html/library.com/classes/conexion.php</a>) y dar enter para entrar al editor del archivo<br/><br/>
+    8. en donde dice (<a style="color:green;"> username </a>) escribir el nombre del usuario que se creo anterior mente y en donde dice  ( password ) escribe la contraseña del usuario creado.<br/><br/>
+    9.Preciona las teclas (<a style="color:green;"> ctrl+o</a>) y da enter para guardar cambios<br/> <br/>
+    10.Preciona las teclas (<a style="color:green;"> ctrl+x</a>) y para salir del editor <br/><br/>
+    11. escribe el comando (<a style="color:green;"> sudo apt install php-mysql </a>) y da enter para instalar el paquete<br/><br/>
+    12. escribe el comando ( <a style="color:green;">s</a>) y precione enter para aceptar la instalacion<br/><br/>
+    13. escribe el comando (<a style="color:green;"> sudo  service apache2 resart</a>) y da enter para reiniciar el servdor.<br/><br/>
+	 <h3><a style="color:cadetblue;">Configuracion del VirtualHosts</a></h3><br/>
+	 Lo primero que tenemos que hacer es entrar a la carpeta (<a style="color:green;">/etc/apache2/sites-available</a>) ,una vez en esa carpeta escribiremos (<a style="color:green;">sudo nano library.com.conf</a>) para proceder a modificarlo.<br/>
+        Dentro del archivo, escribe el codigo que se encuentra a continuacion:<br/><br/>
+
+		VirtualHost*:80><br/>
+		Server Name library.com<br/>
+		Server Alias www.library.com<br/>
+		Server Admin cristianramirez01@gmail.com<br> 
+		DocumentRoot /var/log/library.com-error.log<br>
+		CustomLog /var/log/library.com-acces.log. common<br/>
+		ServerName<br/>
+		/VirtualHost><br/>
+	Revisa que tus carpetas estén en el siguiente orden (<a style="color:green;">/etc/apache2/sites-available/</a>)escribiendo el comando (<a style="color:green;">ls<a>).
+	En la carpeta (<a style="color:green;">sites-available<a>) escribe: (<a style="color:green;">sudo a2ensite library.com </a>)para habilitar el dominio.
+	Reinicia el servicio de apache con el comando (<a style="color:green;">sudo service apache2 restart)</a>.
+	Entra a la carpeta (<a style="color:green;">/etc/hosts/</a>) y agrega lo siguiente:<br/><br/>
+		127.0.0.1 library.com<br/>
+		127.0.0.1 www.library.com<br/><br/>
+	Guarda los cambios mediante <a style="color:green;">Ctrl+O</a><br/>
+	Una vez fuera de la maquina virtual en consola entra a la siguiente carpeta: (<a style="color:green;">/etc/hosts<a>) y agrega el ip de la red anfitrion + nombre del dominio.<br/>
+	Por ejemplo:<br/><br/>
+		192.168.56.101 library.com<br/>
+		192.168.56.101 www.library.com<br/>
+		<br/>
+    
+</body>
+</html>
